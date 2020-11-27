@@ -12,7 +12,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Instrucciones para colaborar en  Hogar de dia 
+## GUIA PARA CONTRUBUIDORES 
 
 bueno, hago este tutorial para los que estamos trabajando en conjunto con los
  fines de que no trabajemos en disntitos proyectos
@@ -54,17 +54,17 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
 
 
 ## INSTALAR GIT (en caso de tener instalado saltear este paso):
-link de descarga de git: https://git-scm.com/downloads
+    link de descarga de git: https://git-scm.com/downloads
 
 ## UNA VEZ INSTALADO TODO recien ahi vamos a CLONAR EL PROYECTO
 
- Para clonar el proyecto nos vamos a la Carpeta donde instalamos el /xampp/htdocs 
- en la barra de direccion ponemos CMD
- una vez abierta la consola ponemos git clone https://github.com/AgostinaGallo/hogardedia.git
- despues abrimos en nuestro IDLE la carpeta. y hacemos las modificaciones. 
+     Para clonar el proyecto nos vamos a la Carpeta donde instalamos el /xampp/htdocs 
+     en la barra de direccion ponemos CMD
+     una vez abierta la consola ponemos git clone https://github.com/AgostinaGallo/hogardedia.git
+     despues abrimos en nuestro IDLE la carpeta. y hacemos las modificaciones. 
 
- una vez hechas las modificaciones tenemos que abrir el cmd o una terminal (gitbash tmb se puede usar)
- y subir con los siguientes comandos. 
+     una vez hechas las modificaciones tenemos que abrir el cmd o una terminal (gitbash tmb se puede usar)
+     y subir con los siguientes comandos. 
 
     ir ejecutando uno a uno.    
         git init
