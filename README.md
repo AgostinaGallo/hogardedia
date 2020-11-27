@@ -79,6 +79,6 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
 
         Avisar preferentemente el cambio en el grupo de whatsapp 
 
-Guido Halley 😁
+https://github.com/guidohalley
 
 
