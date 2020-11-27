@@ -51,6 +51,8 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
     link: https://www.creative-tim.com/product/argon-dashboard-laravel/?partner=91096
 
     link de instalacion : https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/installation.html
+    ## Formularios 
+    https://demos.creative-tim.com/argon-dashboard/docs/components/forms.html
 
 
 ## INSTALAR GIT (en caso de tener instalado saltear este paso):
