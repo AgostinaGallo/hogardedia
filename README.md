@@ -12,7 +12,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## GUIA PARA CONTRUBUIDORES 
+## GUIA PARA CONTRIBUIDORES 
 
 bueno, hago este tutorial para los que estamos trabajando en conjunto con los
  fines de que no trabajemos en disntitos proyectos
