@@ -55,6 +55,12 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
 
 ## INSTALAR GIT (en caso de tener instalado saltear este paso):
     link de descarga de git: https://git-scm.com/downloads
+    
+## LLEGADO A ESTE PUNTO:
+    Abrir el XAMPP
+    comenzar los servicios de apache y mysql
+    entrar en el admin de mysql
+    crear una base de datos con el nombre hogardedia, que no tenga nada
 
 ## UNA VEZ INSTALADO TODO recien ahi vamos a CLONAR EL PROYECTO
 
@@ -78,6 +84,14 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
         git push -u origin main
 
         Avisar preferentemente el cambio en el grupo de whatsapp 
+        
+## CLONADO EL PROYECTO
+    abrir nuevamente la terminal en la direccion /xampp/htdocs/hogardedia  y ejecutar 
+    php artisan migrate 
+    
+    
+    Se puede buscar en la documentacion de laravel. 
+  
 
 https://github.com/guidohalley
 
