@@ -75,3 +75,5 @@ link de descarga de git: https://git-scm.com/downloads
         Avisar preferentemente el cambio en el grupo de whatsapp 
 
 Guido Halley 😁
+
+## SI TENES MAC MANEJATE SOLO
