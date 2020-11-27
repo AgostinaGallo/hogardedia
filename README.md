@@ -51,9 +51,9 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
 ## INSTALAR GIT (en caso de tener instalado saltear este paso):
 link de descarga de git: https://git-scm.com/downloads
 
-UNA VEZ INSTALADO TODO recien ahi vamos a CLONAR EL PROYECTO
+## UNA VEZ INSTALADO TODO recien ahi vamos a CLONAR EL PROYECTO
 
-Para clonar el proyecto nos vamos a la Carpeta donde instalamos el /xampp/htdocs 
+ Para clonar el proyecto nos vamos a la Carpeta donde instalamos el /xampp/htdocs 
  en la barra de direccion ponemos CMD
  una vez abierta la consola ponemos git clone https://github.com/AgostinaGallo/hogardedia.git
  despues abrimos en nuestro IDLE la carpeta. y hacemos las modificaciones. 
@@ -74,3 +74,4 @@ Para clonar el proyecto nos vamos a la Carpeta donde instalamos el /xampp/htdocs
 
         Avisar preferentemente el cambio en el grupo de whatsapp 
 
+Guido Halley 😁
