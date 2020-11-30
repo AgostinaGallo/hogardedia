@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <!-- Header -->
     <div class="header bg-primary pb-6 pt-6">
       <div class="container-fluid">
@@ -10,7 +11,7 @@
               <h6 class="h1 text-white d-inline-block mb-0">Admisiones</h6>
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-md btn-neutral">Agregar Admisión</a>
+              <a href="{{ route('participantes.create') }}" class="btn btn-md btn-neutral">Agregar Admisión</a>
             </div>
           </div>
         </div>
@@ -83,14 +84,9 @@
             </div>
           </div>
         </div>
-      </div>
-      @include('layouts.footers.auth')
+      </div>          
+        @include('layouts.footers.auth')
     </div>
-
 {!! $participantes->links() !!}
-
-
-
-
 @endsection
 

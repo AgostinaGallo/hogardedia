@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ParticipanteController extends Controller
 {
+    // Funcion para controlar Login 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {

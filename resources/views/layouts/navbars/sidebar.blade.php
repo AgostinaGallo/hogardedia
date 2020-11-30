@@ -78,6 +78,27 @@
                       <span class="nav-link-text">Tablas/Informes</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#navbar-participantes" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-participantes">
+                        <i class="ni ni-badge text-pink"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Participante/Familias') }}</span>
+                    </a>
+
+                    <div class="collapse show" id="navbar-participantes">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('participantes.index') }}">
+                                    {{ __('Admisiones') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    {{ __('Asistencias') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> 
             </ul>
             <!-- Divider -->
             <hr class="my-3">
@@ -86,11 +107,10 @@
             <!-- Navigation -->
             <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="ni ni-circle-08 text-pink"></i>
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Usuarios') }}</span>
                     </a>
-
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
@@ -99,7 +119,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">
+                                <a class="nav-link" href="#">
                                     {{ __('Todos los usuarios') }}
                                 </a>
                             </li>
