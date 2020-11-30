@@ -1,3 +1,8 @@
+## INSTRUCCIONES PARA MAC 
+ ( WARREN EDITA ACA )
+
+## INSTRUCCIONES PARA WINDOWS 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -7,55 +12,99 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## GUIA PARA CONTRIBUIDORES 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+bueno, hago este tutorial para los que estamos trabajando en conjunto con los
+ fines de que no trabajemos en distintos proyectos
+  y tengamos todo las mismas versiones de programas
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## COMPONENTES BASICOS A TENER INSTALADOS
+    IDLE : Visual Code o el de su preferencia. Siempre y cuando puedan ver PHP
+    XAMPP : https://www.apachefriends.org/xampp-files/7.2.34/xampp-windows-x64-7.2.34-0-VC15-installer.exe
+        Incluye: 
+            Apache 2.4.46,
+            MariaDB 10.4.14, 
+            PHP 7.2.34, 
+            phpMyAdmin 5.0.3,
+            OpenSSL 1.1.1, 
+            XAMPP Control Panel 3.2.4,
+            Webalizer 2.23-04, 
+            Mercury Mail Transport System 4.63,
+            FileZilla FTP Server 0.9.41,
+            Tomcat 7.0.106 (with mod_proxy_ajp as connector),
+            Strawberry Perl 5.32.0.1 Portable
 
-## Learning Laravel
+## LARAVEL 8
+    Seguir pasos de instalación de la página.
+    link: https://laravel.com/docs/8.x
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+        (curso rapido de LARAVEL 8 para aprender): 
+        link de cursito: https://www.youtube.com/watch?v=A-BL8Ir7puE&list=PLZ2ovOgdI-kWWS9aq8mfUDkJRfYib-SvF
+        
+    --- INSTALACIÓN DE PLANTILLA ADMIN "ARGON"
+    Para verla en vivo:  https://www.creative-tim.com/live/argon-dashboard-laravel
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    Link de Plantilla: https://www.creative-tim.com/product/argon-dashboard-laravel/?partner=91096
 
-## Laravel Sponsors
+    Link de instalación : https://argon-dashboard-laravel.creative-tim.com/docs/getting-started/installation.html
+            ## Para aprender formularios y etc.
+            https://demos.creative-tim.com/argon-dashboard/docs/components/forms.html
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## INSTALAR GIT (en caso de tener instalado saltear este paso):
+    link de descarga de git: https://git-scm.com/downloads
+  
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+##      EMPEZAR A USAR
+## LLEGADO A ESTE PUNTO:
+    1) Abrir XAMPP
+    2) comenzar los servicios de apache y mysql
+    3) Entrar en phpMyAdmin
+    4) crear una base de datos. nombre = hogardedia | cotejamiento = utf8_spanish_ci
 
-## Contributing
+## UNA VEZ INSTALADO Y FUNCIONANDO TODO, recien ahi vamos a CLONAR EL PROYECTO desde GitHub
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+     1. Para clonar el proyecto nos vamos a la Carpeta donde instalamos xampp:  C:/xampp/htdocs/
+     2. En la barra de direccion escribimos cmd y damos al enter, Para abrir una consola de windows aqui.
+     3. Una vez abierta la consola ponemos git clone https://github.com/AgostinaGallo/hogardedia.git
+     4. Despues abrimos en nuestro IDLE la carpeta hogardedia.
+        -- Conectar la base de datos de phpmyadmin con Laravel
+            * Dentro de la carpeta 'hogardedia' del Proyecto en Laravel, Abrir el archivo .env
+            * Deben tener estos datos así: (si tienen el usuario o contraseña propios, Ponerlos)
+                DB_CONNECTION=mysql
+                DB_HOST=127.0.0.1
+                DB_PORT=3306
+                DB_DATABASE=hogardedia
+                DB_USERNAME=root
+                DB_PASSWORD=
+        -----------------------------------
+    5.una vez hechas las modificaciones tenemos que abrir el cmd o una terminal (gitbash tmb se puede usar)
+     y subir con los siguientes comandos. 
 
-## Code of Conduct
+    Ir ejecutanndo de a uno.  
+    
+        git init
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        git add [el archivo con su extension y/o carpeta Ej: plantilla.php ] 
 
-## Security Vulnerabilities
+        git commit -m "[un mensaje de asunto que quieran]"
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+        git remote set-url origin https://github.com/AgostinaGallo/hogardedia.git
 
-## License
+        git push -u origin main
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+        !!! Avisar preferentemente el cambio en el grupo de Whatsapp 
+        
+## CLONADO EL PROYECTO
+    Abrir nuevamente la terminal en la direccion C:/xampp/htdocs/hogardedia y ejecutar: 
+    
+    php artisan migrate 
+    
+    Verificar si las tablas se crearon correctamente en la base de datos
+    
+   Todo esto y más se puede ver desde la Documentación oficial de Laravel https://laravel.com/docs/8.x/installation 
+  
+
+https://github.com/guidohalley
+
