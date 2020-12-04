@@ -79,11 +79,23 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
                 DB_USERNAME=root
                 DB_PASSWORD=
         -----------------------------------
-    5.una vez hechas las modificaciones tenemos que abrir el cmd o una terminal (gitbash tmb se puede usar)
-     y subir con los siguientes comandos. 
-
-    Ir ejecutanndo de a uno.  
+     
+## CLONADO EL PROYECTO
+    Abrir nuevamente la terminal en la direccion C:/xampp/htdocs/hogardedia y ejecutar: 
     
+    php artisan migrate 
+      (Esto creará las tablas en la base de datos)
+    Verificar si las tablas se crearon correctamente en la base de datos
+    
+    
+   Todo esto y más se puede ver desde la Documentación oficial de Laravel https://laravel.com/docs/8.x/installation 
+  
+  
+  ## PARA SUBIR SUS MODIFICACIONES A GITHUB
+    >>una vez hechas las modificaciones tenemos que abrir el cmd o una terminal (gitbash tmb se puede usar)
+     y subir con los siguientes comandos. 
+(Con phpStorm no hacer lo siguiente)
+    Ir ejecutanndo de a uno.
         git init
 
         git add [el archivo con su extension y/o carpeta Ej: plantilla.php ] 
@@ -95,16 +107,6 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
         git push -u origin main
 
         !!! Avisar preferentemente el cambio en el grupo de Whatsapp 
-        
-## CLONADO EL PROYECTO
-    Abrir nuevamente la terminal en la direccion C:/xampp/htdocs/hogardedia y ejecutar: 
-    
-    php artisan migrate 
-    
-    Verificar si las tablas se crearon correctamente en la base de datos
-    
-   Todo esto y más se puede ver desde la Documentación oficial de Laravel https://laravel.com/docs/8.x/installation 
-  
 
 https://github.com/guidohalley
 
