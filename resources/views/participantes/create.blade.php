@@ -3,37 +3,56 @@
 @section('content')
 
     <!-- Header -->
-    <div class="header bg-primary pb-6 pt-6">
-      <div class="container-fluid">
+<div class="header bg-gradient-primary pb-4 pt-4 pt-md-7">
+    <div class="container-fluid">
         <div class="header-body">
-          <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
-              <h6 class="h1 text-white d-inline-block mb-0">Nueva Admisión</h6>
+            <!-- Card header -->
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                        <i class="fas fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="h2 font-weight-bold mb-0">Admisión de Nuevo Participante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-md btn-neutral">Agregar Participante</a>
-            </div>
-          </div>
         </div>
-      </div>
-       @if ($message = Session::get('success'))
-        <div class="alert alert-success pt-6">
-            <p>{{ $message }}</p>
-        </div>
-    @endif  
     </div>
+</div>
 
-    <!-- Page content -->
-<div class="container-fluid mt--6">
-  <hr>
-  <div class="row-fluid">
-    <div class=Span12>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Ups!</strong> Hay problemas con los datos ingresados<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+
+<!-- Page content -->
+<div class="container-fluid mt--14">
+  <div class="row">
+    <div class="col-xl-10 mb-5 mb-xl-0">
+    <div class="card shadow">
       <div class="widget-box">
-        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-          <h5>Formulario de Admision</h5>
+        <div class="col">
+           <h2 class="mb-0">Formulario de Admisión</h2>
         </div>
         <div class="widget-content nopadding">
-          <form action="#" method="get" class="form-horizontal">
+          <form action="{{ route('participantes.store') }}" method="POST">
+            @csrf
             <div class="text-center">
               <h4>Datos Personales</h4>
             </div>
@@ -441,9 +460,10 @@
         </div>
       </div>
     </div>
-  </div>      
-        @include('layouts.footers.auth')
+  </div>         
     </div>
+ @include('layouts.footers.auth')
+
 
 @endsection
 
