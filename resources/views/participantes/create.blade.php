@@ -57,17 +57,17 @@
               <h4>Datos Personales</h4>
             </div>
             <div class="control-group">
-              <label class="control-label">Expediente :</label>
+              <label class="control-label">Nro. Expediente :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Expediente" />
+                <input type="text" name="expediente" class="span11" placeholder="Expediente" />
               </div>
               <label class="control-label">Nombre :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Ingrese el Nombre Completo" />
+                <input type="text" name="nombre" class="span11" placeholder="Ingrese el Nombre Completo" />
               </div>
               <label class="control-label">Apellido :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Ingrese el Apellido" />
+                <input type="text" name="apellido" class="span11" placeholder="Ingrese el Apellido" />
               </div>
               <label class="control-label">DNI :</label>
               <div class="controls">
@@ -81,29 +81,27 @@
               </div>
               <label class="control-label">Edad :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Ingrese la Edad" />
+                <input type="text" name="edad" class="span11" placeholder="Ingrese la Edad" />
               </div>
               <label class="control-label">Genero :</label>
               <div class="controls">
                 <select multiple >
-                  <option>Masculino</option>
-                  <option>Femenino</option>
-                  <option>Otro</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="otro">Otro</option>
                 </select>
               </div>
               <label class="control-label">Nacionalidad :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Ingrese la Nacionalidad" />
+                <input type="text" name="nacionalidad" class="span11" placeholder="Ingrese la Nacionalidad" />
               </div>
               <label class="control-label">Direccion :</label>
               <div class="controls">
-                <input type="text" class="span11" placeholder="Ingrese la Direccion" />
+                <input type="text" name="direccion" class="span11" placeholder="Ingrese la Direccion" />
               </div>
               <label class="control-label">Barrio</label>
               <div class="controls">
-                <select >
-                  <option>Seleccionar un Barrio</option>
-                </select>
+                <input type="text" name="barrio" class="span11" placeholder="Ingrese el Barrio" />
               </div>
               <label class="control-label">Localidad :</label>
               <div class="controls">
