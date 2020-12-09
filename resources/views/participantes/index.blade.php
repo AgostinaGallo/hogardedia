@@ -1,39 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <!-- Header -->
-    <div class="header bg-primary pb-6 pt-6">
-      <div class="container-fluid">
+ 
+<!-- Header -->
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
         <div class="header-body">
-          <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
-              <h6 class="h1 text-white d-inline-block mb-0">Admisiones</h6>
+            <!-- Card header -->
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                        <i class="fas fa-address-card"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="h1 font-weight-bold mb-0">Admisiones</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="{{ route('participantes.create') }}" class="btn btn-md btn-neutral">Agregar Admisión</a>
-            </div>
-          </div>
         </div>
-      </div>
-       @if ($message = Session::get('success'))
-        <div class="alert alert-success pt-6">
-            <p>{{ $message }}</p>
-        </div>
-    @endif  
     </div>
+</div>
+
 
     <!-- Page content -->
-    <div class="container-fluid mt--6">
+    <div class="container-fluid mt--7">
       <div class="row">
         <div class="col">
           <div class="card">
             <!-- Card header -->
             <div class="card-header border-0">
-              <h3 class="mb-0">Participantes Admitidos</h3>
+               <div class="col-lg-12 col-12">
+              <a href="{{ route('participantes.create') }}" class="btn btn-md btn-success float-right">Agregar Admisión</a>
             </div>
-            <!-- Light table -->
-            <div class="table-responsive">
+            <!-- Tabla -->
+            <div class="table-responsive-lg">
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
@@ -42,7 +50,7 @@
                     <th scope="col" class="sort" data-sort="apellido">Apellido</th>
                     <th scope="col" class="sort" data-sort="nombre">Nombre</th>
                     <th scope="col" class="sort" data-sort="fecha_admision">Fecha de Admision</th>
-                    <th scope="col"></th>
+                    <th scope="col">ACCIÓN</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -62,19 +70,18 @@
                       </div>
                     </td>
                     <td>
-                      <form action="{{ route('participantes.destroy',$par->id) }}" method="POST" id="miFormulario">  
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
+                      <form action="{{ route('participantes.destroy',$par->id) }}" method="POST" id="miFormulario">
+                        <a href="{{ route('participantes.show', $par->id) }}" title="show">
+                            <i class="fas fa-eye text-dark fa-lg"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="{{ route('participantes.show',$par->id) }}">Ver Detalles</a>
-                          <a class="dropdown-item" href="{{ route('participantes.edit',$par->id) }}">Editar</a>
-                           @csrf
-                            @method('DELETE')
-                          <a class="dropdown-item" href="#" onclick="document.getElementById('miFormulario').submit()">Borrar</a>
-                        </div>
-                      </div>
+                        <a href="{{ route('participantes.edit', $par->id) }}">
+                            <i class="fas fa-edit fa-lg"></i>
+                        </a>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" title="Borrar" style="border: none; background-color:transparent;">
+                            <i class="fas fa-trash fa-lg text-danger"></i>
+                        </button>
                       </form>
                     </td>
                   </tr>                  
@@ -85,8 +92,24 @@
           </div>
         </div>
       </div>          
-        @include('layouts.footers.auth')
+        
     </div>
+
+  <!-- Mensaje de exito, segun accion elegida -->
+@if ($message = Session::get('success'))
+    <div class="alert alert-default alert-dismissible fade show" role="alert">
+      <span class="alert-inner--icon"><i class="ni ni-check-bold"></i></span>
+      <span class="alert-inner--text">{{ $message }}</span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>  
+    </div>
+        
+@endif 
+
 {!! $participantes->links() !!}
+
+@include('layouts.footers.auth')
+
 @endsection
 

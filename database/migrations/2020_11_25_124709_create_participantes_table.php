@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateParticipantesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('participantes', function (Blueprint $table) {
@@ -44,7 +40,7 @@ class CreateParticipantesTable extends Migration
             $table->string('situac_crisis');
             $table->string('redes_sosten');
             $table->string('discapacidad');
-            $table->string('entrev_visita');
+            $table->string('entrev_visita);
             $table->string('tipo_entrev_visita');
             $table->date('fecha_entrev_visita');
             $table->string('observaciones');
