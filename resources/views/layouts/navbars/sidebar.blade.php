@@ -5,8 +5,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/logo0.png" class="navbar-brand-img" style="width:270px;height:130px; alt="...">
+        <a class="navbar-brand pt-0" href="{{ route('home') }}">    
+            <img src="{{ asset('argon') }}/img/brand/logo1.png" class="navbar-brand-img" style="width:651px;height:383px; alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
