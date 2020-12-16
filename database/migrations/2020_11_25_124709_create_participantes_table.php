@@ -10,8 +10,8 @@ class CreateParticipantesTable extends Migration
     public function up()
     {
         Schema::create('participantes', function (Blueprint $table) {
-            $table->charset = 'utf8';
-            $table->collation = 'utf8_spanish_ci';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_spanish_ci';
 
             $table->timestamps();            
             $table->integer('dni', false, true)->length(11)->primary();            
