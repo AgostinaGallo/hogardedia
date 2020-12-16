@@ -23,7 +23,7 @@ class CreateHogaresTable extends Migration
             $table->string('telefono', 20)->nullable($value = true);           
         });
 
-
+        // Se insertan datos precargados, al mismo momento de crear la tabla
         DB::table('hogares')->insert([
         ['id'=>1, 'descripcion'=>'Hogar de Día Posadas', 'localidad'=>54028030000, 'domicilio'=>'Av. López Torres 4486 (esq. Av. Comandante Rosales)', 'codigo_postal'=>'3300', 'email'=>'subsecomunitaria@gmail.com', 'telefono'=>''],
         ['id'=>2, 'descripcion'=>'Hogar de Día Oberá', 'localidad'=>54091080000, 'domicilio'=>'Schnarbach y Portugal', 'codigo_postal'=>'3335', 'email'=>'', 'telefono'=>''],
