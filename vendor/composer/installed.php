@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '1cdd7a3d6110593a4caf5b43dba5372ffb085e4e',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -438,6 +438,15 @@
       ),
       'reference' => '62b3cb7516a605634416ceb386c6f2b467bc5f45',
     ),
+    'laravel-lang/lang' => 
+    array (
+      'pretty_version' => '7.0.9',
+      'version' => '7.0.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '679a65755db37b35acd36a5e0ca51e055815a00a',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v8.15.0',
@@ -449,12 +458,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '1cdd7a3d6110593a4caf5b43dba5372ffb085e4e',
     ),
     'laravel/legacy-factories' => 
     array (
