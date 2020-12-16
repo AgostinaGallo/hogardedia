@@ -61,7 +61,7 @@ bueno, hago este tutorial para los que estamos trabajando en conjunto con los
     1) Abrir XAMPP
     2) comenzar los servicios de apache y mysql
     3) Entrar en phpMyAdmin
-    4) crear una base de datos. nombre = hogardedia | cotejamiento = utf8_spanish_ci
+    4) crear una base de datos. nombre = hogardedia | cotejamiento = utf8mb4_spanish_ci
 
 ## UNA VEZ INSTALADO Y FUNCIONANDO TODO, recien ahi vamos a CLONAR EL PROYECTO desde GitHub
 
