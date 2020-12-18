@@ -17,8 +17,8 @@ class ParticipanteController extends Controller
     {
         $participantes = Participante::latest()->paginate(10);
 
-        return view('participantes.index',compact('participantes'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('participantes.index',compact('participantes'));
+            
     }
 
 
