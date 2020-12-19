@@ -12,8 +12,7 @@ class CreateParticipantesTable extends Migration
         Schema::create('participantes', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
-
-            $table->timestamps();            
+           
             $table->integer('dni', false, true)->length(11)->primary();            
             $table->string('apellido', 70);
             $table->string('nombre', 70);
@@ -57,8 +56,9 @@ class CreateParticipantesTable extends Migration
             $table->decimal('ingresos_por_familia', $precision = 32, $scale = 2)->nullable($value = true);
             $table->string('expediente', 50)->nullable($value = true);
             $table->string('demanda_general', 500)->nullable($value = true);
-            $table->string('hogar', 11);
-
+            $table->integer('hogar');
+            
+            $table->timestamps(); 
 
         });
     }
