@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\ParticipanteController;
 /*
@@ -32,5 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::resource('participantes', ParticipanteController::class);
+Route::resource('familiares', FamiliaController::class);
 
 Auth::routes();
