@@ -14,7 +14,7 @@ class CreateObservacionesEducacionTable extends Migration
             $table->id(); 
             $table->integer('dni');           
             $table->date('fecha');           
-            $table->string('observacion',1500);           
+            $table->string('observacion', 1500);           
         });
     }
 
