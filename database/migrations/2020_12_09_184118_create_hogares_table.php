@@ -15,7 +15,7 @@ class CreateHogaresTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
             $table->id(); 
-            $table->string('descripcion');           
+            $table->string('dni');           
             $table->bigInteger('localidad');           
             $table->string('domicilio');           
             $table->string('codigo_postal', 5);           
