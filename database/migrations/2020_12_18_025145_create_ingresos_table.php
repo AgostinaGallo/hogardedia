@@ -15,7 +15,7 @@ class CreateIngresosTable extends Migration
             $table->integer('dni');            
             $table->string('apellido', 50);
             $table->string('nombres', 70);         
-            $table->date('ingreso');           
+            $table->dateTime('ingreso');           
             $table->integer('hogar');
         });
     }

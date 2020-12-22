@@ -11,10 +11,11 @@ class CreateFamiliaresTable extends Migration
         Schema::create('familiares', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
+            
             $table->id(); 
             $table->integer('dni_participante');           
             $table->integer('dni_familiar');           
-            $table->integer('relacion');  
+            $table->string('relacion', 20);  
             $table->string('apellido', 70);
             $table->string('nombres', 70);         
             $table->date('fecha_nacimiento')->nullable($value = true);          

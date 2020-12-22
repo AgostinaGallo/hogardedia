@@ -11,7 +11,7 @@ class CreateAdmisionesTable extends Migration
     public function up()
     {
         Schema::create('admisiones', function (Blueprint $table) {
-            $table->engine = 'MyISAM';
+            $table->engine = 'InnoDB';
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
             $table->integer('id'); 
@@ -20,18 +20,13 @@ class CreateAdmisionesTable extends Migration
             $table->string('apellido')->nullable($value = true);           
             $table->string('nombres')->nullable($value = true);             
             $table->string('genero')->nullable($value = true);           
-            $table->date('fecha_nacimiento')->nullable($value = true);     
-            // En caso de no ser el tipo de dato correcto, corregir; en el prototipo de SQL es tipo DATETIME.
-            $table->date('ingreso'); 
+            $table->date('fecha_nacimiento')->nullable($value = true);            
+            $table->dateTime('ingreso'); 
 
-
-            $table->primary(array('id', 'dni'));
-
-            
+            $table->primary(['id', 'dni']);          
         });
 
         DB::statement('ALTER TABLE admisiones MODIFY id INTEGER NOT NULL AUTO_INCREMENT');
-
 
     }
 

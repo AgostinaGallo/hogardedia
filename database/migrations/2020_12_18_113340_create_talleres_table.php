@@ -13,7 +13,7 @@ class CreateTalleresTable extends Migration
             $table->collation = 'utf8mb4_spanish_ci';
             $table->id(); 
             $table->integer('dni');                    
-            $table->string('taller',70);  
+            $table->string('taller', 70);  
         });
     }
     public function down()

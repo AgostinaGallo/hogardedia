@@ -10,7 +10,7 @@ use App\Http\Controllers\ParticipanteController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by php artisan make:controller ProductController --resource --model=Productthe RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */

@@ -10,7 +10,7 @@ class CreateEntrevistasTable extends Migration
     public function up()
     {
         Schema::create('entrevistas', function (Blueprint $table) {
-            $table->engine = 'MyISAM';
+            $table->engine = 'InnoDB';
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
             
@@ -22,8 +22,6 @@ class CreateEntrevistasTable extends Migration
             $table->string('observaciones', 1500)->nullable($value = true);
 
             $table->primary(['id', 'dni_participante']);
-
-            
         });
         
         DB::statement('ALTER TABLE entrevistas MODIFY id INTEGER NOT NULL AUTO_INCREMENT');

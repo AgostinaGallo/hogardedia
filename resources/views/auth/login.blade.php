@@ -10,9 +10,7 @@
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
                             <small>
-                                    Crea una nueva cuenta o inicia sesión con estos datos:
-                                    <br>
-                                    Usuario <strong>admin@argon.com</strong> Contraseña: <strong>secret</strong>
+                                    Crea una nueva cuenta o inicia sesión sus datos:                                   
                             </small>
                         </div>
                         <form role="form" method="POST" action="{{ route('login') }}">
