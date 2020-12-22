@@ -13,7 +13,6 @@ class CreateLocalidadesTable extends Migration
             $table->engine = 'InnoDB';
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
-            // Nota: en el prototipo decia BIGINT(20); cualquier cosa arreglar este campo.
             $table->bigInteger('id', false, true)->primary(); 
             $table->string('descripcion', 70);           
         });
@@ -94,7 +93,7 @@ class CreateLocalidadesTable extends Migration
         ['id'=>54070080000, 'descripcion'=>'OLEGARIO V. ANDRADE'],
         ['id'=>54070090000, 'descripcion'=>'VILLA LIBERTAD'],
         ['id'=>54077010000, 'descripcion'=>'CAPIOVI'],
-        ['id'=>54077015000, 'descripcion'=>'CAPIOVICIÃ?O'],
+        ['id'=>54077015000, 'descripcion'=>'CAPIOVICIÑO'],
         ['id'=>54077020000, 'descripcion'=>'EL ALCAZAR'],
         ['id'=>54077030000, 'descripcion'=>'GARUHAPE'],
         ['id'=>54077040000, 'descripcion'=>'MBOPICUA'],
