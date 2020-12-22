@@ -18,8 +18,7 @@ class FamiliaController extends Controller
     {
         $familiares = Familia::latest()->paginate(10);
 
-        return view('familiares.index',compact('familiares'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('familiares.index',compact('familiares'));
     }
 
 
