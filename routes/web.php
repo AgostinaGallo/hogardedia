@@ -34,5 +34,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('participantes', ParticipanteController::class);
 Route::resource('familiares', FamiliaController::class);
+Route::resource('talleres', TallerController::class);
 
 Auth::routes();

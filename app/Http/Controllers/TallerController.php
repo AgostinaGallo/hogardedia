@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\talleres;
+use App\Models\taller;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TalleresController extends Controller
+class TallerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
-        $talleres = Talleres::latest()->paginate(10);
+        $talleres = Taller::latest()->paginate(10);
 
         return view('talleres.index',compact('talleres'));
     }
@@ -19,7 +23,7 @@ class TalleresController extends Controller
 
     public function create()
     {
-        return view('talleres.create');
+        return view('talleres.create'); 
     }
 
 
@@ -29,44 +33,43 @@ class TalleresController extends Controller
             'dni' => 'required',
             'taller' => 'required',
         ]);
-
-        Talleres::create($request->all());
-
+    
+        Taller::create($request->all());
+     
         return redirect()->route('talleres.index')
                         ->with('success','Taller creado exitosamente.');
     }
 
 
-    public function show(talleres $talleres)
+    public function show(taller $taller)
     {
-        return view('talleres.show',compact('talleres'));
+        return view('talleres.show',compact('taller'));
     }
 
 
-    public function edit(talleres $talleres)
+    public function edit(taller $taller)
     {
-        return view('talleres.edit',compact('talleres'));
+        return view('talleres.edit',compact('taller'));
     }
 
 
-    public function update(Request $request, talleres $talleres)
+    public function update(Request $request, taller $taller)
     {
         $request->validate([
             'dni' => 'required',
             'taller' => 'required',
         ]);
-
-        $talleres->update($request->all());
-
+    
+        $taller->update($request->all());
+    
         return redirect()->route('talleres.index')
                         ->with('success','Taller actualizado correctamente.');
     }
 
 
-    public function destroy(talleres $talleres)
+    public function destroy(taller $taller)
     {
-        // Elimino llamando al metodo con la clase Participante, eligiendo por el $id recibido
-        $talleres->delete();
+        $taller->delete();
 
         return redirect()->route('talleres.index')
                         ->with('success','Taller eliminado correctamente.');
@@ -75,8 +78,8 @@ class TalleresController extends Controller
 
     public function delete($id)
     {
-        $talleres = Talleres::find($id);
+        $taller = Taller::find($id);
 
-        return view('talleres.delete', compact('talleres'));
-    }
+        return view('talleres.delete', compact('taller'));
+    }   
 }
