@@ -33,6 +33,7 @@ class RegisterController extends Controller
     }
 
 
+    
     protected function validator(array $data)
     {
         return Validator::make($data, [
