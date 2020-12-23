@@ -18,7 +18,7 @@
                     <span class="h2 font-weight-bold mb-0">0</span>
                 </button>
                 <br class="table-responsive">   
-                <!-- Tabla --> 
+                <!-- Tabla  --> 
                             
 
             </div>
