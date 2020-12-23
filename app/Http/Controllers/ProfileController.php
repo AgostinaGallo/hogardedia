@@ -27,7 +27,7 @@ class ProfileController extends Controller
     public function update(ProfileRequest $request)
     {
         if (auth()->user()->id == 1) {
-            return back()->withErrors(['not_allow_profile' => __('You are not allowed to change data for a default user.')]);
+            return back()->withErrors(['not_allow_profile' => __('No estás autorizado para cambiar los datos de el usuario por defecto.')]);
         }
 
         auth()->user()->update($request->all());
@@ -44,7 +44,7 @@ class ProfileController extends Controller
     public function password(PasswordRequest $request)
     {
         if (auth()->user()->id == 1) {
-            return back()->withErrors(['not_allow_password' => __('You are not allowed to change the password for a default user.')]);
+            return back()->withErrors(['not_allow_password' => __('No estás autorizado para cambiar la contraseña de el usuario por defecto.')]);
         }
 
         auth()->user()->update(['password' => Hash::make($request->get('password'))]);

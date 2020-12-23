@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\ParticipanteController;
 /*
@@ -9,7 +10,7 @@ use App\Http\Controllers\ParticipanteController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by php artisan make:controller ProductController --resource --model=Productthe RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -32,5 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::resource('participantes', ParticipanteController::class);
+Route::resource('familiares', FamiliaController::class);
+Route::resource('talleres', TallerController::class);
 
 Auth::routes();

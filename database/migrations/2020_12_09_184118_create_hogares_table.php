@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
 use Illuminate\Support\Facades\DB;
 
 class CreateHogaresTable extends Migration
@@ -12,15 +11,19 @@ class CreateHogaresTable extends Migration
     public function up()
     {
         Schema::create('hogares', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
+
             $table->id(); 
             $table->string('descripcion');           
-            $table->bigInteger('localidad');           
+            $table->bigInteger('localidad', $autoIncrement = false, $unsigned = true)->index();           
             $table->string('domicilio');           
-            $table->string('codigo_postal', 5);           
+            $table->string('codigo_postal', 52);           
             $table->string('email', 70)->nullable($value = true);          
-            $table->string('telefono', 20)->nullable($value = true);           
+            $table->string('telefono', 20)->nullable($value = true);  
+            
+            $table->foreign('localidad')->references('id')->on('localidades');
         });
 
         // Se insertan datos precargados, al mismo momento de crear la tabla
