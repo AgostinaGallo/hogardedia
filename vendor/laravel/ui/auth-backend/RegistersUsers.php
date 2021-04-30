@@ -6,7 +6,6 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 trait RegistersUsers
 {
@@ -19,9 +18,7 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        // Selecciono todos los hogares y los devuelvo a la vista, Usando la libreria Illuminate\Support\Facades\DB
-        $hogares = DB::select('select * from hogares');
-        return view('auth.register', compact('hogares'));
+        return view('auth.register');
     }
 
     /**
