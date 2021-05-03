@@ -5,14 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Taller extends Model
+class Ingreso extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-    	'taller', 
+        'apellido',
+        'nombres',
+        'ingreso',
+        'hogar_id',
         'participante_dni',
     ];
+
+    public function hogar()
+    {
+        return $this->belongsTo(Hogar::class, 'hogar_id');
+    }
 
     public function participante()
     {

@@ -15,6 +15,7 @@ class CreateIngresosTable extends Migration
             $table->string('apellido', 50);
             $table->string('nombres', 70);         
             $table->dateTime('ingreso');
+            $table->timestamps();
 
             $table->unsignedBigInteger('hogar_id')->nullable();
             $table->foreign('hogar_id')->references('id')->on('hogares');

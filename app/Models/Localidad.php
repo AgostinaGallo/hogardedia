@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Taller extends Model
+class Localidad extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-    	'taller', 
-        'participante_dni',
-    ];
+    public function hogar()
+    {
+        return $this->hasMany(Hogar::class);
+    }
 
     public function participante()
     {
-        return $this->belongsTo(Participante::class, 'participante_dni');
+        return $this->hasMany(Participante::class);
     }
 }

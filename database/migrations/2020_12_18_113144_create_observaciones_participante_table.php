@@ -14,7 +14,6 @@ class CreateObservacionesParticipanteTable extends Migration
             $table->id();           
             $table->dateTime('fecha');           
             $table->string('observacion', 1500);  
-
             $table->integer('participante_dni')->unsigned()->nullable();
             $table->foreign('participante_dni')->references('dni')->on('participantes');
         });

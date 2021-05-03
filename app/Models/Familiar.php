@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Taller extends Model
+class Familiar extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-    	'taller', 
-        'participante_dni',
+    	'participante_dni', 'dni_familiar', 'nombres', 'apellido', 'fecha_nacimiento', 'observaciones', 'domicilio'
     ];
 
     public function participante()
