@@ -11,12 +11,16 @@ class CreateIngresosTable extends Migration
         Schema::create('ingresos', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
-            $table->id(); 
-            $table->integer('dni');            
+            $table->id();            
             $table->string('apellido', 50);
             $table->string('nombres', 70);         
-            $table->dateTime('ingreso');           
-            $table->integer('hogar');
+            $table->dateTime('ingreso');
+
+            $table->unsignedBigInteger('hogar_id')->nullable();
+            $table->foreign('hogar_id')->references('id')->on('hogares');
+
+            $table->integer('participante_dni')->unsigned()->nullable();
+            $table->foreign('participante_dni')->references('dni')->on('participantes');
         });
     }
 

@@ -21,7 +21,6 @@ class CreateParticipantesTable extends Migration
             $table->date('fecha_admision')->nullable($value = true);
             $table->date('fecha_readmision')->nullable($value = true);
             $table->string('nacionalidad')->nullable($value = true);
-            $table->integer('localidad')->nullable($value = true);
             $table->string('direccion_calle', 70)->nullable($value = true);
             $table->string('casa', 50)->nullable($value = true);
             $table->string('barrio', 50)->nullable($value = true);
@@ -56,10 +55,14 @@ class CreateParticipantesTable extends Migration
             $table->decimal('ingresos_por_familia', $precision = 32, $scale = 2)->nullable($value = true);
             $table->string('expediente', 50)->nullable($value = true);
             $table->string('demanda_general', 500)->nullable($value = true);
-            $table->integer('hogar');
-            
-            $table->timestamps(); 
+          
+            $table->unsignedBigInteger('hogar_id')->nullable();
+            $table->foreign('hogar_id')->references('id')->on('hogares');
 
+            $table->unsignedBigInteger('localidad_id')->nullable();
+            $table->foreign('localidad_id')->references('id')->on('localidades');
+            
+            $table->timestamps();   
         });
     }
 

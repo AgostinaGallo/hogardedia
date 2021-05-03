@@ -11,22 +11,22 @@ class CreateAdmisionesTable extends Migration
     public function up()
     {
         Schema::create('admisiones', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8mb4';
-            $table->collation = 'utf8mb4_spanish_ci';
-            $table->integer('id'); 
-            $table->integer('hogar');           
-            $table->integer('dni');           
+            $table->id();                    
             $table->string('apellido')->nullable($value = true);           
             $table->string('nombres')->nullable($value = true);             
             $table->string('genero')->nullable($value = true);           
             $table->date('fecha_nacimiento')->nullable($value = true);            
-            $table->dateTime('ingreso'); 
+            $table->dateTime('ingreso');    
 
-            $table->primary(['id', 'dni']);          
+            $table->unsignedBigInteger('hogar_id')->nullable();
+            $table->foreign('hogar_id')->references('id')->on('hogares');
+
+            $table->integer('participante_dni')->unsigned()->nullable();
+            $table->foreign('participante_dni')->references('dni')->on('participantes');
+        
+            $table->timestamps();
         });
 
-        DB::statement('ALTER TABLE admisiones MODIFY id INTEGER NOT NULL AUTO_INCREMENT');
 
     }
 

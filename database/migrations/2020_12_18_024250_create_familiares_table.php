@@ -12,8 +12,7 @@ class CreateFamiliaresTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
             
-            $table->id(); 
-            $table->integer('dni_participante');           
+            $table->id();           
             $table->integer('dni_familiar');           
             $table->string('relacion', 20);  
             $table->string('apellido', 70);
@@ -21,6 +20,9 @@ class CreateFamiliaresTable extends Migration
             $table->date('fecha_nacimiento')->nullable($value = true);          
             $table->string('observaciones', 500)->nullable($value = true);
             $table->string('domicilio', 70)->nullable($value = true);
+        
+            $table->integer('participante_dni')->unsigned()->nullable();
+            $table->foreign('participante_dni')->references('dni')->on('participantes');
         });
     }
 

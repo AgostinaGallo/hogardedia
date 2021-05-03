@@ -14,17 +14,15 @@ class CreateEntrevistasTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
             
-            $table->integer('id');
-            $table->integer('dni_participante');       
+            $table->id();       
             $table->integer('entrevistador_dni')->nullable($value = true);          
             $table->string('entrevistador_nombres', 50)->nullable($value = true);           
             $table->date('fecha');           
             $table->string('observaciones', 1500)->nullable($value = true);
 
-            $table->primary(['id', 'dni_participante']);
+            $table->integer('participante_dni')->unsigned()->nullable();
+            $table->foreign('participante_dni')->references('dni')->on('participantes');
         });
-        
-        DB::statement('ALTER TABLE entrevistas MODIFY id INTEGER NOT NULL AUTO_INCREMENT');
     }
 
    

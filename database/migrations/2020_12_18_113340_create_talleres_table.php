@@ -11,9 +11,11 @@ class CreateTalleresTable extends Migration
         Schema::create('talleres', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
-            $table->id(); 
-            $table->integer('dni');                    
-            $table->string('taller', 70);  
+            $table->id();                  
+            $table->string('taller', 70); 
+            
+            $table->integer('participante_dni')->unsigned()->nullable();
+            $table->foreign('participante_dni')->references('dni')->on('participantes');
         });
     }
     public function down()
